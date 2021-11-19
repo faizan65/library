@@ -2,6 +2,10 @@
 
 <% authors.forEach(author => {
     %> <div style="margin: 10px;"><%= author.name %></div>
-    <button style="margin-right: 5px;" type="submit">Edit</button>
-    <button type="submit">Delete</button><br>
+    <a href="/authors/<%= author.id %>">View</a>
+    <a href="/authors/<%= author.id %>/edit">Edit</a>
+    <form method="post" action="/authors/<%= author.id %>?_method=DELETE">
+        <button type="submit">Delete</button>
+        
+    </form>
 <% }) %>
