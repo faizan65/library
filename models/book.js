@@ -5,25 +5,19 @@ const bookSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: {
-        type: String
-    },    
-    date: {
-        type: Date,
-        required: true
-    },
+   
     summary: {
-        type: Date,
+        type: String,
         required: true
     },
-    isbn: {
-        type: Date,
+    genre: {
+        type: String,
         required: true
     },
     author : {
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         required: true,
-        ref: 'Author'
+        // ref: 'Author'
     }
 })
 

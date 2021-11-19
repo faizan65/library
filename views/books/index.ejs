@@ -1,2 +1,7 @@
-<h2> Books  Title</h2>
+<h2> Book Titles</h2>
 
+<% books.forEach(book => {
+    %> <div style="margin: 10px;"><%= book.title %></div>
+    <button style="margin-right: 5px;" type="submit">Edit</button>
+    <button type="submit">Delete</button><br>
+<% }) %>
